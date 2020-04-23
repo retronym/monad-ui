@@ -33,7 +33,7 @@ class OutputTest {
     println(matching.map(x => classPathEntry.relativize(x)).mkString("\n"))
   }
 
-  object testFlatMapDsl {
+  case object testFlatMapDsl {
     measureCodeSize(this)
     import OutputFlatMapDsl._
     val result = for (_1 <- o1; _2 <- o2; _3 <- o3; _4 <- o4; _5 <- o5; _6 <- o6; _7 <- o7; _8 <- o8; _9 <- o9; _10 <- o10) yield (_1 + _2 + _3 + _4 + _5 + _6 + _7 + _8 + _9 + _10)

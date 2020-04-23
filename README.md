@@ -11,7 +11,7 @@ Exploring different UIs for a simple Monad to evaluate the amount of code genera
 ```
 
 ================================================================================
-monadui.OutputTest$testFlatMapDsl$@589b3632
+testFlatMapDsl
 1 classes, 8743 bytes
 monadui/OutputTest$testFlatMapDsl$.class
 Output(Some(55),Map(Source -> Vector(OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest)))
