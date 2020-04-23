@@ -11,7 +11,8 @@ object OutputFlatMapMacroDsl {
     def filter(f: T => Boolean): Output[T] = ???
     def withFilter(f: T => Boolean): Output[T] = ???
   }
-
+  // TODO add @unheckedBounds to the temp vals to avoid refchecks warnings that otherwise would not have been
+  //      issued for sub-expressions that have inferred types that don't satisfy bounds.
   def flatMapImpl[U: c.WeakTypeTag](c: blackbox.Context)(f: c.Tree): c.Tree = {
     import c.universe._
     c.macroApplication match {
