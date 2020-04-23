@@ -3,6 +3,7 @@ package monadui
 import language.experimental.macros
 import scala.reflect.macros.blackbox
 
+/** The same API as FlatMapDsl, but inlines the combinators when the argument is function literal. */
 object OutputFlatMapMacroDsl {
   implicit class RichOutput[T](val output: Output[T]) extends AnyVal {
     def flatMap[U](f: T => Output[U]): Output[U] = macro flatMapImpl[U]

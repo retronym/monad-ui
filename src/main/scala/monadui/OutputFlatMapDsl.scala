@@ -2,6 +2,9 @@ package monadui
 
 import scala.collection.immutable.HashMap
 
+/**
+ * A traditional monadic DSL, suitable for use in for comprehensions.
+ */
 object OutputFlatMapDsl {
   implicit class RichOutput[T](val output: Output[T]) extends AnyVal {
     def flatMap[U](f: T => Output[U]): Output[U] = {

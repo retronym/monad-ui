@@ -2,6 +2,12 @@
 
 Exploring different UIs for a simple Monad to evaluate the amount of code generated.
 
+  - [Output](src/main/scala/monadui/Output.scala) data type (writer + option effects)
+  - [DSL implementations](src/main/scala/monadui)
+  - Client code in [OutputTest](src/test/scala/monadui/OutputTest.scala)
+  
+## Results
+
 ```
 
 ================================================================================
@@ -44,4 +50,5 @@ testAsyncDsl
 monadui/OutputTest$testAsyncDsl$stateMachine$async$1.class
 monadui/OutputTest$testAsyncDsl$.class
 Output(Some(55),Map(Source -> Vector(OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest)))
-U```
+```
+

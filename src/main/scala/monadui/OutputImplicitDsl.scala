@@ -4,6 +4,11 @@ import monadui.Output.mergeMultiMap
 
 import scala.util.control.ControlThrowable
 
+/** A lambda-free DSL that records all encounter 'written' values in a scope object as they
+ *  are extracted, and appends all these into a the result of the `writing` block.
+ *
+ *  Optionality is implemented with as an exception.
+ */
 object OutputImplicitDsl {
 
   final class OutputScope {

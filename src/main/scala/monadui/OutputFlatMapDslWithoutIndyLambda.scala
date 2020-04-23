@@ -2,6 +2,10 @@ package monadui
 
 import scala.collection.immutable.HashMap
 
+/** The same API as OutputFlatMapDsl, but uses a custom function type that can't be compiled to invokedynamic
+ *  LambdaMetafactory. This increases the constant factor of the code size overhead of flatMap chaining as each
+ *  lambda is compiled to a .class file, rather a method in the enclosing class.
+ */
 object OutputFlatMapDslWithoutIndyLambda {
   implicit class RichOutput[T](val output: Output[T]) extends AnyVal {
     def flatMap[U](f: CustomFunction[T, Output[U]]): Output[U] = {
