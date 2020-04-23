@@ -16,6 +16,9 @@ final case class Output[T](value: Option[T], written: HashMap[String, Vector[Any
       case None => throw scope.noSuchElementException
     }
   }
+  def withValue[U](value: Option[U], written: HashMap[String, Vector[Any]]): Output[U] = {
+    new Output(value, Output.mergeMultiMap(this.written, written))
+  }
 }
 
 object Output {

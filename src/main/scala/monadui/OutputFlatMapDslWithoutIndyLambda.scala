@@ -1,22 +1,26 @@
 package monadui
 
+import scala.collection.immutable.HashMap
+
 object OutputFlatMapDslWithoutIndyLambda {
   implicit class RichOutput[T](val output: Output[T]) extends AnyVal {
     def flatMap[U](f: CustomFunction[T, Output[U]]): Output[U] = {
       output.value match {
         case Some(v) => f(v) match {
-          case Output(s @ Some(_), written1) => Output(s, Output.mergeMultiMap(output.written, written1))
-          case Output(None, written1) => Output(None, Output.mergeMultiMap(output.written, written1))
+          case Output(s @ Some(_), written1) => output.withValue(s, written1)
+          case Output(None, written1) => output.withValue(None, written1)
         }
-        case None => Output(None, output.written)
+        case None => this.asInstanceOf[Output[U]]
       }
     }
     def map[U](f: CustomFunction[T, U]): Output[U] = {
-      Output(output.value.map(f), output.written)
+      if (output.value.isDefined)
+        output.withValue(output.value.map(f), HashMap.empty)
+      else this.asInstanceOf[Output[U]]
     }
     def filter(f: CustomFunction[T, Boolean]): Output[T] = {
       if (output.value.exists(f)) output
-      else Output(None, output.written)
+      else output.withValue(None, HashMap.empty)
     }
     def withFilter(f: CustomFunction[T, Boolean]): Output[T] = filter(f)
   }

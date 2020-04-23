@@ -8,7 +8,7 @@ monadui.OutputTest$testFlatMapDsl$@589b3632 generates 1 classes, 8743 bytes
 monadui/OutputTest$testFlatMapDsl$.class
 Output(Some(55),Map(Source -> Vector(OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest)))
 ================================================================================
-monadui.OutputTest$testFlatMapDslWithoutIndyLambda$@8909f18 generates 11 classes, 26461 bytes
+testFlatMapDslWithoutIndyLambda generates 11 classes, 27717 bytes
 monadui/OutputTest$testFlatMapDslWithoutIndyLambda$$anonfun$monadui$OutputTest$testFlatMapDslWithoutIndyLambda$$$nestedInanonfun$result$14$1.class
 monadui/OutputTest$testFlatMapDslWithoutIndyLambda$.class
 monadui/OutputTest$testFlatMapDslWithoutIndyLambda$$anonfun$1.class
@@ -22,11 +22,15 @@ monadui/OutputTest$testFlatMapDslWithoutIndyLambda$$anonfun$monadui$OutputTest$t
 monadui/OutputTest$testFlatMapDslWithoutIndyLambda$$anonfun$monadui$OutputTest$testFlatMapDslWithoutIndyLambda$$$nestedInanonfun$result$11$1.class
 Output(Some(55),Map(Source -> Vector(OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest)))
 ================================================================================
-monadui.OutputTest$testImplicitDsl$@290d210d generates 1 classes, 3130 bytes
+testFlatMapMacroDsl generates 1 classes, 2909 bytes
+monadui/OutputTest$testFlatMapMacroDsl$.class
+Output(None,Map(Source -> Vector(OutputTest)))
+================================================================================
+testImplicitDsl generates 1 classes, 4268 bytes
 monadui/OutputTest$testImplicitDsl$.class
 Output(Some(55),Map(Source -> Vector(OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest)))
 ================================================================================
-monadui.OutputTest$testAsyncDsl$@27c86f2d generates 2 classes, 5791 bytes
+testAsyncDsl generates 2 classes, 7032 bytes
 monadui/OutputTest$testAsyncDsl$stateMachine$async$1.class
 monadui/OutputTest$testAsyncDsl$.class
 Output(Some(55),Map(Source -> Vector(OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest, OutputTest)))
