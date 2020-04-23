@@ -26,8 +26,10 @@ class OutputTest {
     val baseFileName = classPathEntry.resolve(a.getClass.getName.replace('.', '/')).toString
     val matching = entries.filter(_.toString.startsWith(baseFileName)).toList
     val classBytes = matching.map(m => Files.size(m)).sum
+    println()
     println("=" * 80)
-    println(s"""${a} generates ${matching.size} classes, ${classBytes} bytes""")
+    println(a)
+    println(s"""${matching.size} classes, ${classBytes} bytes""")
     println(matching.map(x => classPathEntry.relativize(x)).mkString("\n"))
   }
 
